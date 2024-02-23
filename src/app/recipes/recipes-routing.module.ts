@@ -8,13 +8,11 @@ import { RecipeStartComponent } from './recipe-start/recipe-start.component';
 import { RecipesResolverService } from './recipes-resolver.service';
 import { RecipesComponent } from './recipes.component';
 
-
-
 const routes: Routes = [
   {
-    path: 'recipes',
+    path: '',
     component: RecipesComponent,
-    canActivate : [AuthGuard],
+    canActivate: [AuthGuard],
     children: [
       {
         path: '',
@@ -34,17 +32,14 @@ const routes: Routes = [
         path: ':id/edit',
         component: RecipeEditComponent,
         resolve: [RecipesResolverService],
-
       },
     ],
   },
-]
+];
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule, RouterModule.forChild(routes)
-  ],
-  exports : [RouterModule]
+  imports: [CommonModule, RouterModule.forChild(routes)],
+  exports: [RouterModule],
 })
-export class RecipesRoutingModule { }
+export class RecipesRoutingModule {}
