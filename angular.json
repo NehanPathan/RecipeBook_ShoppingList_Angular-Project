@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "my-dream-app:build:production"
+              "buildTarget": "my-dream-app:build:production"
             },
             "development": {
-              "browserTarget": "my-dream-app:build:development"
+              "buildTarget": "my-dream-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "my-dream-app:build"
+            "buildTarget": "my-dream-app:build"
           }
         },
         "test": {
